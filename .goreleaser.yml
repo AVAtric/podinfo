@@ -3,11 +3,8 @@ builds:
     binary: podcli
     ldflags: -s -w -X github.com/avatric/podinfo/pkg/version.REVISION={{.Commit}}
     goos:
-      - windows
-      - darwin
       - linux
     goarch:
-      - amd64
       - arm64
     env:
       - CGO_ENABLED=0
