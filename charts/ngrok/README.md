@@ -31,7 +31,7 @@ The following tables lists the configurable parameters of the Grafana chart and 
 
 Parameter | Description | Default
 --- | --- | ---
-`image.repository` | Image repository | `stefanprodan/ngrok`
+`image.repository` | Image repository | `avatric/ngrok`
 `image.pullPolicy` | Image pull policy | `IfNotPresent`
 `image.tag` | Image tag | `latest`
 `replicaCount` | desired number of pods | `1`

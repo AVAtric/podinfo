@@ -20,11 +20,11 @@ var doc = `{
         "title": "Podinfo API",
         "contact": {
             "name": "Source Code",
-            "url": "https://github.com/stefanprodan/podinfo"
+            "url": "https://github.com/avatric/podinfo"
         },
         "license": {
             "name": "MIT License",
-            "url": "https://github.com/stefanprodan/podinfo/blob/master/LICENSE"
+            "url": "https://github.com/avatric/podinfo/blob/master/LICENSE"
         },
         "version": "2.0"
     },

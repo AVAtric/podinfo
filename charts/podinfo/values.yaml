@@ -20,7 +20,7 @@ h2c:
   enabled: false
 
 image:
-  repository: stefanprodan/podinfo
+  repository: avatric/podinfo
   tag: 3.2.3
   pullPolicy: IfNotPresent
 

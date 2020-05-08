@@ -6,12 +6,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: kubeval
-        uses: stefanprodan/kube-tools@v1
+        uses: avatric/kube-tools@v1
         with:
           command: |
             kustomize build ./kustomize | kubeval --strict
       - name: conftest
-        uses: stefanprodan/kube-tools@v1
+        uses: avatric/kube-tools@v1
         with:
           command: |
             kustomize build ./kustomize | conftest test -p .github/policy -

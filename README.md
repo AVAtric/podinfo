@@ -1,9 +1,9 @@
 # podinfo
 
-[![CircleCI](https://circleci.com/gh/stefanprodan/podinfo.svg?style=svg)](https://circleci.com/gh/stefanprodan/podinfo)
-[![conftest](https://github.com/stefanprodan/podinfo/workflows/test/badge.svg)](https://github.com/stefanprodan/podinfo/blob/master/.github/workflows/test.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/stefanprodan/podinfo)](https://goreportcard.com/report/github.com/stefanprodan/podinfo)
-[![Docker Pulls](https://img.shields.io/docker/pulls/stefanprodan/podinfo)](https://hub.docker.com/r/stefanprodan/podinfo)
+[![CircleCI](https://circleci.com/gh/avatric/podinfo.svg?style=svg)](https://circleci.com/gh/avatric/podinfo)
+[![conftest](https://github.com/avatric/podinfo/workflows/test/badge.svg)](https://github.com/avatric/podinfo/blob/master/.github/workflows/test.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/avatric/podinfo)](https://goreportcard.com/report/github.com/avatric/podinfo)
+[![Docker Pulls](https://img.shields.io/docker/pulls/avatric/podinfo)](https://hub.docker.com/r/avatric/podinfo)
 
 Podinfo is a tiny web application made with Go that showcases best practices of running microservices in Kubernetes.
 
@@ -53,7 +53,7 @@ gRPC API:
 
 Web UI:
 
-![podinfo-ui](https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/screens/podinfo-ui-v3.png)
+![podinfo-ui](https://raw.githubusercontent.com/avatric/podinfo/gh-pages/screens/podinfo-ui-v3.png)
 
 To access the Swagger UI open `<podinfo-host>/swagger/index.html` in a browser.
 
@@ -72,7 +72,7 @@ To access the Swagger UI open `<podinfo-host>/swagger/index.html` in a browser.
 Helm:
 
 ```bash
-helm repo add podinfo https://stefanprodan.github.io/podinfo
+helm repo add podinfo https://avatric.github.io/podinfo
 
 helm upgrade --install --wait frontend \
 --namespace test \
@@ -92,11 +92,11 @@ podinfo/podinfo
 Kustomize:
 
 ```bash
-kubectl apply -k github.com/stefanprodan/podinfo//kustomize
+kubectl apply -k github.com/avatric/podinfo//kustomize
 ```
 
 Docker:
 
 ```bash
-docker run -dp 9898:9898 stefanprodan/podinfo
+docker run -dp 9898:9898 avatric/podinfo
 ```

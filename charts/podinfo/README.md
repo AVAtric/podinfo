@@ -8,7 +8,7 @@ that showcases best practices of running microservices in Kubernetes.
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm repo add sp https://stefanprodan.github.io/podinfo
+$ helm repo add sp https://avatric.github.io/podinfo
 $ helm upgrade my-release --install sp/podinfo 
 ```
 
@@ -43,7 +43,7 @@ Parameter | Default | Description
 `faults.unhealthy` | `false` | When set, the healthy state is never reached
 `faults.unready` | `false` | When set, the ready state is never reached
 `h2c.enabled` | `false` | Allow upgrading to h2c
-`image.repository` | `stefanprodan/podinfo` | Image repository
+`image.repository` | `avatric/podinfo` | Image repository
 `image.tag` | `<VERSION>` | Image tag
 `image.pullPolicy` | `IfNotPresent` | Image pull policy
 `service.enabled` | `true` | Create a Kubernetes Service, should be disabled when using [Flagger](https://flagger.app)
