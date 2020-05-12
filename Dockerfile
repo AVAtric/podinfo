@@ -8,14 +8,10 @@ COPY . .
 
 RUN go mod download
 
-RUN GIT_COMMIT=$(git rev-list -1 HEAD) && \
-    CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w \
-    -X github.com/avatric/podinfo/pkg/version.REVISION=${GIT_COMMIT}" \
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
     -a -o bin/podinfo cmd/podinfo/*
 
-RUN GIT_COMMIT=$(git rev-list -1 HEAD) && \
-    CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w \
-    -X github.com/avatric/podinfo/pkg/version.REVISION=${GIT_COMMIT}" \
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
     -a -o bin/podcli cmd/podcli/*
 
 FROM alpine:3.11
