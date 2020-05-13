@@ -1,4 +1,4 @@
-FROM golang:1.14 as builder
+FROM amd64/golang:1.14-alpine as builder
 
 RUN mkdir -p /podinfo/
 
@@ -14,7 +14,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
     -a -o bin/podcli cmd/podcli/*
 
-FROM alpine:3.11
+FROM amd64/alpine:3.11
 
 RUN addgroup -S app \
     && adduser -S -g app app \

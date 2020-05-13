@@ -14,7 +14,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" \
     -a -o bin/podcli cmd/podcli/*
 
-FROM alpine:3.11
+FROM arm64v8/alpine:3.11
 
 RUN addgroup -S app \
     && adduser -S -g app app \

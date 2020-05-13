@@ -1,4 +1,4 @@
-image: avatric/podinfo:latest
+image: avatric/podinfo:2.3
 manifests:
   - image: avatric/podinfo:amd64
     platform:
