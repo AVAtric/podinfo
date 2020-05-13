@@ -1,0 +1,10 @@
+image: avatric/podinfo:latest
+manifests:
+  - image: avatric/podinfo:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: avatric/podinfo:arm64
+    platform:
+      architecture: arm64
+      os: linux
