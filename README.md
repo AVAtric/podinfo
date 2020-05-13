@@ -1,7 +1,5 @@
 # podinfo
 
-[![CircleCI](https://circleci.com/gh/avatric/podinfo.svg?style=svg)](https://circleci.com/gh/avatric/podinfo)
-[![conftest](https://github.com/avatric/podinfo/workflows/test/badge.svg)](https://github.com/avatric/podinfo/blob/master/.github/workflows/test.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/avatric/podinfo)](https://goreportcard.com/report/github.com/avatric/podinfo)
 [![Docker Pulls](https://img.shields.io/docker/pulls/avatric/podinfo)](https://hub.docker.com/r/avatric/podinfo)
 
