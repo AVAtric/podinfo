@@ -22,7 +22,6 @@ var (
 )
 
 func main() {
-
 	var err error
 	logger, err = zap.NewDevelopment()
 	if err != nil {
