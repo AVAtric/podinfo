@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"net/http"
 	"path"
+	"log"
 )
 
 // Index godoc
@@ -14,6 +15,21 @@ import (
 // @Router / [get]
 // @Success 200 {string} string "OK"
 func (s *Server) indexHandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Scheme != "https" {
+		target := "https://" + r.Host + r.URL.Path
+
+	    if len(r.URL.RawQuery) > 0 {
+	        target += "?" + r.URL.RawQuery
+	    }
+
+	    log.Printf("redirect to: %s", target)
+
+		http.Redirect(w, r, target , http.StatusMovedPermanently)
+	}
+
+	log.Printf("redirect to: %s", r.URL.Scheme)
+
+
 	tmpl, err := template.New("vue.html").ParseFiles(path.Join(s.config.UIPath, "vue.html"))
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
