@@ -15,6 +15,8 @@ import (
 // @Router / [get]
 // @Success 200 {string} string "OK"
 func (s *Server) indexHandler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("Scheme: %s", r.URL.Scheme)
+	
 	if r.URL.Scheme != "https" {
 		target := "https://" + r.Host + r.URL.Path
 
@@ -27,7 +29,7 @@ func (s *Server) indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, target , http.StatusMovedPermanently)
 	}
 
-	log.Printf("redirect to: %s", r.URL.Scheme)
+	log.Printf("no redirect: %s", r.URL.Scheme)
 
 
 	tmpl, err := template.New("vue.html").ParseFiles(path.Join(s.config.UIPath, "vue.html"))
